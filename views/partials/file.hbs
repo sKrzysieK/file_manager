@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+
+<body>
+
+    <!--img src="{{iconUrl}}"-->
+    <td>{{id}}</td>
+    <td><img src="/gfx/icons/{{extension}}.png"></td>
+    <td>{{name}}</td>
+    <td>{{size}}</td>
+    <td>{{type}}</td>
+    <td>
+        <form class="small" action="/handleDelete" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="submit" value="DELETE">
+        </form>
+    </td>
+    <td>
+        <form class="small" action="/handleInfo" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="submit" value="INFO">
+        </form>
+    </td>
+    <td>
+        <form class="small" action="/handleDownload" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="submit" value="DOWNLOAD">
+        </form>
+    </td>
+
+
+
+
+
+</body>
+
+</html>

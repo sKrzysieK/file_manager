@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILEMANAGER</title>
+</head>
+
+<body>
+    {{> header}}
+    <div id="left">
+        <div class="fixed">
+            <h1 class="slogan">file manager</h1>
+            <form id="delAll" action="/handleDeleteAll" method="post">
+                <input type="submit" value="DELETE ALL">
+            </form>
+        </div>
+    </div>
+    <div id="files">
+        <table>
+
+
+            <tr>
+                <th>id</th>
+                <th>obraz</th>
+                <th>name</th>
+                <th>size</th>
+                <th>type</th>
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+            {{#each file}}
+            {{#if id }}
+            <tr id="id{{id}}">
+                {{> file}}
+            </tr>
+            {{/if}}
+            {{/each}}
+
+
+        </table>
+    </div>
+
+</body>
+
+</html>
