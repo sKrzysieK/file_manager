@@ -23,8 +23,6 @@ app.engine('hbs', hbs({
 app.set('view engine', 'hbs')                            // określenie nazwy silnika szablonów
 
 
-//var context = require("./data/data01.json")
-//console.log(context)
 
 app.get("/", function (req, res) {
     res.render('upload.hbs', data)
